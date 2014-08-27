@@ -1,3 +1,6 @@
 .metadata
 /Java8FeatureInvestigation/bin
 /Java8FeatureInvestigationTests/bin
+
+*.class
+
