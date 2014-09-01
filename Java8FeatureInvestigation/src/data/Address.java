@@ -1,24 +1,24 @@
 package data;
 
 public class Address {
-	private String FirstLine;
-	private String SecondLine;
+	private int HouseNumber;
+	private String RoadName;
 	private String Town;
 	private String PostCode;
 	
-	public Address(String firstLine, String secondLine, String town, String postCode)
+	public Address(int houseNumber, String roadName, String town, String postCode)
 	{
-		FirstLine = firstLine;
-		SecondLine = secondLine;
+		HouseNumber = houseNumber;
+		RoadName = roadName;
 		Town = town;
 		PostCode = postCode;
 	}
 	
-	public String getFirstLine() {
-		return FirstLine;
+	public int getHouseNumber() {
+		return HouseNumber;
 	}
-	public String getSecondLine() {
-		return SecondLine;
+	public String getRoadName() {
+		return RoadName;
 	}
 	public String getTown() {
 		return Town;
