@@ -19,4 +19,13 @@ public class PersonDataStreams {
 						 .collect(Collectors.toList());
 	}
 	
+	public Collection<Person> findPersonsWhoseAddressPostcodeContainsGivenSubstring( Collection<Person> allPersons, 
+																				     String postcodeSubstring) {
+		return allPersons.stream()
+						 .filter(person -> person.getHomeAddress()
+								 			     .getPostCode()
+								 			     .contains(postcodeSubstring))
+						 .collect(Collectors.toList());
+	}
+	
 }

@@ -35,6 +35,18 @@ public class PersonDataStreamsTests {
 		Assert.assertEquals(1, results.size());
 	}
 	
+	@Test
+	public void TestFindingPersonsWithSubstringInPostCode() {
+		ArrayList<Person> testPeople = new ArrayList<Person>();
+		testPeople.add(new Person("Person", "One", 21, new Address(3, "Rutlans Gardens", "Hove", "BN3 4AP")));
+		testPeople.add(new Person("Person", "Two", 22, new Address(23, "Canfield Close", "Brighton", "BN2 4DJ")));
+		testPeople.add(new Person("Person", "Three", 23, new Address(86, "Ship Street", "Brighton", "BN1 9NP")));
+		testPeople.add(new Person("Person", "Four", 24, new Address(24, "Woodland Avenue", "Clacton", "CO15 9SD")));
+		
+		Collection<Person> results = personDataStreams.findPersonsWhoseAddressPostcodeContainsGivenSubstring(testPeople, "BN");
+		Assert.assertEquals(3, results.size());
+	}
+	
 	private ArrayList<Person> CreateBasicTestPeopleCollection() {
 		ArrayList<Person> testPeople = new ArrayList<Person>();
 		testPeople.add(new Person("Fred", "Bloggs", 43, new Address(3, "Rutlans Gardens", "Brighton", "BN3 4AP")));
