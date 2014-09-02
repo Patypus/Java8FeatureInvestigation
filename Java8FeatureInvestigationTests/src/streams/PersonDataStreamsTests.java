@@ -43,6 +43,14 @@ public class PersonDataStreamsTests {
 		Assert.assertEquals(3, results.size());
 	}
 	
+	@Test
+	public void testFindPersonWithSubstringInPostCodeIsNotCaseSensitive() {
+		ArrayList<Person> testPeople = createPostCodeTestPeopleCollection();
+		
+		Collection<Person> results = personDataStreams.findPersonsWhoseAddressPostcodeContainsGivenSubstring(testPeople, "bn");
+		Assert.assertEquals(3, results.size());
+	}
+	
 	private ArrayList<Person> createBasicTestPeopleCollection() {
 		ArrayList<Person> testPeople = new ArrayList<Person>();
 		testPeople.add(new Person("Fred", "Bloggs", 43, new Address(3, "Rutlans Gardens", "Brighton", "BN3 4AP")));

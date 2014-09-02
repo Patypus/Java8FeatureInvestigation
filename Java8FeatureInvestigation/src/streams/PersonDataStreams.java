@@ -21,10 +21,11 @@ public class PersonDataStreams {
 	
 	public Collection<Person> findPersonsWhoseAddressPostcodeContainsGivenSubstring( Collection<Person> allPersons, 
 																				     String postcodeSubstring) {
+		String lowerCasePostcodeSubstring = postcodeSubstring.toLowerCase();
 		return allPersons.stream()
 						 .filter(person -> person.getHomeAddress()
-								 			     .getPostCode()
-								 			     .contains(postcodeSubstring))
+								 			     .getPostCode().toLowerCase()
+								 			     .contains(lowerCasePostcodeSubstring))
 						 .collect(Collectors.toList());
 	}
 	
