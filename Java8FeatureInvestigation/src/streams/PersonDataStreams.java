@@ -13,4 +13,10 @@ public class PersonDataStreams {
 						 .collect(Collectors.toList());
 	}
 	
+	public Collection<Person> findPersonsWithAgeGreaterThanGivenValue( Collection<Person> allPersons, int age) {
+		return allPersons.stream()
+						 .filter(person -> person.getAge() > age)
+						 .collect(Collectors.toList());
+	}
+	
 }
