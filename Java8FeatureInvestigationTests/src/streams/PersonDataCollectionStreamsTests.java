@@ -24,15 +24,24 @@ private static PersonDataCollectionStreams personDataCollectionStreams;
 	public void testGettingAverageAgeOfPersonsCollection() {
 		ArrayList<Person> testPeople = createBasicTestPeopleCollection();
 		
-		double averageResult = personDataCollectionStreams.getAverageAgeOfPersonsInCollection(testPeople);
-		Assert.assertEquals(40, averageResult, 0.0);
+		double averageResult = personDataCollectionStreams.getAverageAgeOfPersonsInCollection( testPeople );
+		Assert.assertEquals( 40, averageResult, 0.0 );
 	}	
+	
+	@Test
+	public void testGettingConcatenatedStringOfAllPesonsFirstNames() {
+		ArrayList<Person> testPeople = createBasicTestPeopleCollection();
+		
+		String result = personDataCollectionStreams.concatenateFirstNamesOfPersonsInCollection( testPeople );
+		String expected = "Fred, Urist, Linda";
+		Assert.assertEquals(expected, result);
+	}
 	
 	
 	private ArrayList<Person> createBasicTestPeopleCollection() {
 		ArrayList<Person> testPeople = new ArrayList<Person>();
 		testPeople.add(new Person("Fred", "Bloggs", 43, new Address(3, "Rutlans Gardens", "Brighton", "BN3 4AP")));
-		testPeople.add(new Person("Fred", "TheSecond", 25, new Address(23, "Sun Street", "Whitby", "YO22 4AP")));
+		testPeople.add(new Person("Urist", "McEntry", 25, new Address(23, "Sun Street", "Whitby", "YO22 4AP")));
 		testPeople.add(new Person("Linda", "someoneElse", 52, new Address(86, "Belgravia Crescent", "Folkstone", "CT17 9QL")));
 		return testPeople;
 	}

@@ -12,4 +12,9 @@ public class PersonDataCollectionStreams {
 						 .collect(Collectors.averagingInt(Person::getAge));
 	}
 	
+	public String concatenateFirstNamesOfPersonsInCollection( Collection<Person> allPersons ) {
+		return allPersons.stream()
+						 .collect(Collectors.mapping(Person::getFirstName, Collectors.joining(", ")));
+	}
+	
 }

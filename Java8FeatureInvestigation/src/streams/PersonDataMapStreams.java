@@ -25,5 +25,4 @@ public class PersonDataMapStreams {
 						 .collect(Collectors.toList());
 	}
 	
-	
 }
