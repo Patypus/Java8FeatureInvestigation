@@ -37,6 +37,7 @@ private static PersonDataCollectionStreams personDataCollectionStreams;
 		Assert.assertEquals(expected, result);
 	}
 	
+	//TODO - add method/test for grouping around a boundary. extra test for what happens to entry on the boundary.
 	
 	private ArrayList<Person> createBasicTestPeopleCollection() {
 		ArrayList<Person> testPeople = new ArrayList<Person>();
