@@ -31,6 +31,19 @@ public class PersonDataMapStreamsTests {
 		Assert.assertArrayEquals(expected.toArray(), result.toArray());
 	}
 	
+	@Test
+	public void testCreatingListOfHouseNumbersOnCertainStreet() {
+		ArrayList<Person> testPersons = createTestPoepleFromSameRoadCollection();
+		
+		Collection<Integer> result = 
+				personDataMapStreams.getCollectionOfHouseNumbersOfPeopleLivingOnSpecifiedRoad(testPersons, "Mahler Avenue");
+		Collection<Integer> expected = new ArrayList<Integer>();
+		expected.add(15);
+		expected.add(66);
+		expected.add(45);
+		Assert.assertArrayEquals(expected.toArray(), result.toArray());
+	}
+	
 	
 	private ArrayList<Person> createBasicTestPeopleCollection() {
 		ArrayList<Person> testPeople = new ArrayList<Person>();
@@ -40,4 +53,11 @@ public class PersonDataMapStreamsTests {
 		return testPeople;
 	}
 	
+	private ArrayList<Person> createTestPoepleFromSameRoadCollection() {
+		ArrayList<Person> testPeople = new ArrayList<Person>();
+		testPeople.add(new Person("George", "Byron", 36, new Address(15, "Mahler Avenue", "Grimsby", "YO22 4AP")));
+		testPeople.add(new Person("Percy", "Shelly", 29, new Address(66, "Mahler Avenue", "Grimsby", "YO22 4AP")));
+		testPeople.add(new Person("Johann", "Geothe", 82, new Address(45, "Mahler Avenue", "Grimsby", "YO22 4AP")));
+		return testPeople;
+	}
 }
