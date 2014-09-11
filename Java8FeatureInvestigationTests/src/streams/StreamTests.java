@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ PersonDataStreamsTests.class })
+@SuiteClasses({ PersonDataFilterStreamsTests.class, PersonDataMapStreamsTests.class, PersonDataCollectionStreamsTests.class })
 public class StreamTests {
 
 }

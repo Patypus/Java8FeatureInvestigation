@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import data.Person;
 
-public class PersonDataStreams {
+public class PersonDataFilterStreams {
 
 	public Collection<Person> findPersonsWithFirstName( Collection<Person> allPersons, String firstName ) {
 		return allPersons.stream()
