@@ -1,8 +1,10 @@
-package predicates;
+package callable;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import callable.StringMatching;
 
 public class StringMatchingTests {
 

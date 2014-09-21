@@ -1,4 +1,4 @@
-package predicates;
+package callable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Callable;
