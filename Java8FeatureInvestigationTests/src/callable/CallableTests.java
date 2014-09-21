@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ StringMatchingTests.class })
-public class PredicatesTests {
+public class CallableTests {
 
 	
 }
