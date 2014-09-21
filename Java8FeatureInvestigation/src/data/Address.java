@@ -6,6 +6,8 @@ public class Address {
 	private String Town;
 	private String PostCode;
 	
+	public static final String NoAddress = "No fixed abode";
+	
 	public Address(int houseNumber, String roadName, String town, String postCode)
 	{
 		HouseNumber = houseNumber;
