@@ -60,10 +60,10 @@ public class PersonPredicatesTests {
 	}
 	
 	private Address createDummyAddress() {
-		return new Address(14, "Eric road", "Cardiff", "CF1 2PH");
+		return new Address(14, "Eric road", "Cardiff", "CF1 2PH", "UK");
 	}
 	
 	private Address createNoFixedAbodeAddress() {
-		return new Address(0, Address.NoAddress, "", "");
+		return new Address(0, Address.NoAddress, "", "", "");
 	}
 }

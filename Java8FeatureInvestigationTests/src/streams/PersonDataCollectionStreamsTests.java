@@ -63,14 +63,14 @@ private static PersonDataCollectionStreams personDataCollectionStreams;
 	
 	private ArrayList<Person> createBasicTestPeopleCollection() {
 		ArrayList<Person> testPeople = new ArrayList<Person>();
-		testPeople.add(new Person("Fred", "Bloggs", 43, new Address(3, "Rutlans Gardens", "Brighton", "BN3 4AP")));
-		testPeople.add(new Person("Urist", "McEntry", 25, new Address(23, "Sun Street", "Whitby", "YO22 4AP")));
-		testPeople.add(new Person("Linda", "someoneElse", 52, new Address(86, "Belgravia Crescent", "Folkstone", "CT17 9QL")));
+		testPeople.add(new Person("Fred", "Bloggs", 43, new Address(3, "Rutlans Gardens", "Brighton", "BN3 4AP", "UK")));
+		testPeople.add(new Person("Urist", "McEntry", 25, new Address(23, "Sun Street", "Whitby", "YO22 4AP", "UK")));
+		testPeople.add(new Person("Linda", "someoneElse", 52, new Address(86, "Belgravia Crescent", "Folkstone", "CT17 9QL", "UK")));
 		return testPeople;
 	}
 	
 	private ArrayList<Person> createTestPeopleCollectionForAgeTest() {
-		Address dummyAddress = new Address(1, "Somewhere street", "Dartford", "DA1 5PA");
+		Address dummyAddress = new Address(1, "Somewhere street", "Dartford", "DA1 5PA", "UK");
 		
 		ArrayList<Person> testPeople = new ArrayList<Person>();
 		testPeople.add(new Person("Andrew", "Person", 26, dummyAddress));

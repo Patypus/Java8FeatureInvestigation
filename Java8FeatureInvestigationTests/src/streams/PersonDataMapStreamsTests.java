@@ -47,17 +47,17 @@ public class PersonDataMapStreamsTests {
 	
 	private ArrayList<Person> createBasicTestPeopleCollection() {
 		ArrayList<Person> testPeople = new ArrayList<Person>();
-		testPeople.add(new Person("Fred", "Bloggs", 43, new Address(3, "Rutlans Gardens", "Brighton", "BN3 4AP")));
-		testPeople.add(new Person("Andrew", "Nother", 25, new Address(23, "Sun Street", "Whitby", "YO22 4AP")));
-		testPeople.add(new Person("Linda", "someoneElse", 52, new Address(86, "Belgravia Crescent", "Folkstone", "CT17 9QL")));
+		testPeople.add(new Person("Fred", "Bloggs", 43, new Address(3, "Rutlans Gardens", "Brighton", "BN3 4AP", "UK")));
+		testPeople.add(new Person("Andrew", "Nother", 25, new Address(23, "Sun Street", "Whitby", "YO22 4AP", "UK")));
+		testPeople.add(new Person("Linda", "someoneElse", 52, new Address(86, "Belgravia Crescent", "Folkstone", "CT17 9QL", "UK")));
 		return testPeople;
 	}
 	
 	private ArrayList<Person> createTestPoepleFromSameRoadCollection() {
 		ArrayList<Person> testPeople = new ArrayList<Person>();
-		testPeople.add(new Person("George", "Byron", 36, new Address(15, "Mahler Avenue", "Grimsby", "YO22 4AP")));
-		testPeople.add(new Person("Percy", "Shelly", 29, new Address(66, "Mahler Avenue", "Grimsby", "YO22 4AP")));
-		testPeople.add(new Person("Johann", "Geothe", 82, new Address(45, "Mahler Avenue", "Grimsby", "YO22 4AP")));
+		testPeople.add(new Person("George", "Byron", 36, new Address(15, "Mahler Avenue", "Grimsby", "YO22 4AP", "UK")));
+		testPeople.add(new Person("Percy", "Shelly", 29, new Address(66, "Mahler Avenue", "Grimsby", "YO22 4AP", "UK")));
+		testPeople.add(new Person("Johann", "Geothe", 82, new Address(45, "Mahler Avenue", "Grimsby", "YO22 4AP", "UK")));
 		return testPeople;
 	}
 }
