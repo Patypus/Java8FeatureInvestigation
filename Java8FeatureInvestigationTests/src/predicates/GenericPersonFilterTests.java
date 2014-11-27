@@ -1,6 +1,6 @@
 package predicates;
 
-import static predicates.PersonPredicates.*;
+import static predicates.PersonPredicates.isAdult;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,7 +9,6 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import callable.StringMatching;
 import data.Address;
 import data.Person;
 
