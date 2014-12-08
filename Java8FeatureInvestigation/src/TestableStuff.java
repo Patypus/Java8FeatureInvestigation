@@ -1,7 +1,7 @@
 
 public class TestableStuff {
 
-	public String returnHappyMessage(String name)
+	public String returnHappyMessage( final String name )
 	{
 		return "Hello " + name;
 	}

@@ -9,19 +9,19 @@ import data.Person;
 
 public class PersonDataCollectionStreams {
 
-	public double getAverageAgeOfPersonsInCollection( Collection<Person> allPersons ) {
+	public double getAverageAgeOfPersonsInCollection( final Collection<Person> allPersons ) {
 		return allPersons.stream()
-						 .collect(Collectors.averagingInt(Person::getAge));
+						 .collect( Collectors.averagingInt( Person::getAge ) );
 	}
 	
-	public String concatenateFirstNamesOfPersonsInCollection( Collection<Person> allPersons ) {
+	public String concatenateFirstNamesOfPersonsInCollection( final Collection<Person> allPersons ) {
 		return allPersons.stream()
-						 .collect(Collectors.mapping(Person::getFirstName, Collectors.joining(", ")));
+						 .collect(Collectors.mapping( Person::getFirstName, Collectors.joining( ", " ) ) );
 	}
 	
-	public Map<Boolean, List<Person>> sortPersonsIntoSubsetsByGreaterAndLessThanAge( Collection<Person> allPersons, int age ) {
+	public Map<Boolean, List<Person>> sortPersonsIntoSubsetsByGreaterAndLessThanAge( final Collection<Person> allPersons, final int age ) {
 		return allPersons.stream()
-						 .collect(Collectors.partitioningBy(person -> person.getAge() > age));
+						 .collect( Collectors.partitioningBy( person -> person.getAge() > age ) );
 	}
 	
 }

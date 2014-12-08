@@ -13,7 +13,7 @@ public class ImplementableTests {
 		String defaultFromEnglish = english.getGreeting();
 		String defaultFromGerman = german.getGreeting();
 		
-		Assert.assertEquals(defaultFromGerman, defaultFromEnglish);
+		Assert.assertEquals( defaultFromGerman, defaultFromEnglish );
 	}
 	
 	@Test
@@ -23,7 +23,7 @@ public class ImplementableTests {
 		
 		String messageFromOverridden = overridden.getGreeting();
 		
-		Assert.assertNotEquals(defaultMessage, messageFromOverridden);
+		Assert.assertNotEquals( defaultMessage, messageFromOverridden );
 	}
 	
 }

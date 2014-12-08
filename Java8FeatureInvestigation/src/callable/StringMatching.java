@@ -13,23 +13,23 @@ public class StringMatching {
 		lengthFunctionMap = createLengthFunctionMap();
 	}
 	
-	public String getMessageForStringMessage(String originalString) {
-		Length stringLength = determineLengthValueFromStringLength(originalString.length());
-		Callable<String> function = lengthFunctionMap.get(stringLength);
-		return callSelectedLengthFunction(function);
+	public String getMessageForStringMessage( String originalString ) {
+		Length stringLength = determineLengthValueFromStringLength( originalString.length() );
+		Callable<String> function = lengthFunctionMap.get( stringLength );
+		return callSelectedLengthFunction( function );
 	}
 	
-	private String callSelectedLengthFunction(Callable<String> function) {
+	private String callSelectedLengthFunction( final Callable<String> function ) {
 		String message = "";
 		try {
 			message = function.call();
-		} catch (Exception e) {
+		} catch ( Exception e ) {
 			message = unableToFindMessageForString();
 		}
 		return message;
 	}
 	
-	private Length determineLengthValueFromStringLength(int stringLength)
+	private Length determineLengthValueFromStringLength( final int stringLength )
 	{
 		return stringLength < 10 ? Length.Short : 
 								   stringLength > 20 ? Length.Long : 
@@ -39,9 +39,9 @@ public class StringMatching {
 	private HashMap<Length, Callable<String>> createLengthFunctionMap()
 	{
 		 HashMap<Length, Callable<String>> map = new HashMap<Length, Callable<String>>();
-		 map.put(Length.Short, () -> shortStringMessage());
-		 map.put(Length.Medium, () -> mediumStringMessage());
-		 map.put(Length.Long, () -> longStringMessage());
+		 map.put( Length.Short, () -> shortStringMessage() );
+		 map.put( Length.Medium, () -> mediumStringMessage() );
+		 map.put( Length.Long, () -> longStringMessage() );
 		 return map;
 	}
 	
@@ -60,4 +60,5 @@ public class StringMatching {
 	private String unableToFindMessageForString() {
 		return "Unable to find method for string length";
 	}
+
 }

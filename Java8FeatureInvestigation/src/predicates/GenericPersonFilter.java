@@ -8,9 +8,11 @@ import data.Person;
 
 public class GenericPersonFilter {
 
-	public List<Person> filterAllPersonsWithSuppliedPredicate(ArrayList<Person> allPersons, Predicate<Person> predicate) {
+	public List<Person> filterAllPersonsWithSuppliedPredicate( final ArrayList<Person> allPersons, 
+															   final Predicate<Person> predicate) 
+   {
 		return allPersons.stream()
-						 .filter(predicate)
+						 .filter( predicate )
 						 .collect(Collectors.toList());
 	}
 	

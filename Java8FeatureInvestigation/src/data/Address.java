@@ -1,15 +1,15 @@
 package data;
 
 public class Address {
-	private int HouseNumber;
-	private String RoadName;
-	private String Town;
-	private String PostCode;
-	private String Country;
+	private final int HouseNumber;
+	private final String RoadName;
+	private final String Town;
+	private final String PostCode;
+	private final String Country;
 	
 	public static final String NoAddress = "No fixed abode";
 	
-	public Address(int houseNumber, String roadName, String town, String postCode, String country)
+	public Address( final int houseNumber, final String roadName, final String town, final String postCode, final String country )
 	{
 		HouseNumber = houseNumber;
 		RoadName = roadName;

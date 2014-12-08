@@ -5,12 +5,12 @@ import data.Person;
 
 public class PersonPredicates {
 	
-	public static boolean isAdult(Person person) {
+	public static boolean isAdult( final Person person ) {
 		return person.getAge() >= 18;
 	}
 	
-	public static boolean personHasAddress(Person person) {
+	public static boolean personHasAddress( final Person person ) {
 		return person.getHomeAddress() != null &&
-			   !person.getHomeAddress().getRoadName().equals(Address.NoAddress);
+			   !person.getHomeAddress().getRoadName().equals( Address.NoAddress );
 	}
 }

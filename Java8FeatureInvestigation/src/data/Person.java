@@ -1,12 +1,12 @@
 package data;
 
 public class Person {
-	private String FirstName;
-	private String SecondName;
-	private int Age;
-	private Address HomeAddress;
+	private final String FirstName;
+	private final String SecondName;
+	private final int Age;
+	private final Address HomeAddress;
 	
-	public Person(String firstName, String secondName, int age, Address address) {
+	public Person( final String firstName, final String secondName, final int age, final Address address) {
 		FirstName = firstName;
 		SecondName = secondName;
 		Age = age;
